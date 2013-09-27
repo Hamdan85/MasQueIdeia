@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Owner:</b>
+  <%= @idea.owner %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @idea.title %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @idea.image %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @idea.text %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @idea.category %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @idea.tags %>
+</p>
+
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>

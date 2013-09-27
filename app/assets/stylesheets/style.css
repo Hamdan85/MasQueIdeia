@@ -1,0 +1,405 @@
+
+::-webkit-scrollbar {
+    height: 10px;
+	width: 10px;
+	background: white;
+    }
+::-webkit-scrollbar-thumb {
+    background: darkblue;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+    background: #1b74dc;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+h1 small {
+  font-size: 24.5px;
+}
+
+h2 small {
+  font-size: 17.5px;
+}
+
+h3 small {
+  font-size: 14px;
+}
+
+h4 small {
+  font-size: 14px;
+}
+
+
+.container {
+	width: 100%
+}
+
+.right-container {
+	padding-right: 25px;
+	color: white;
+	top: 0px;
+	right: 0px;
+	position: fixed;
+    float: right;
+    width: 50%;
+    height: 100%;
+    
+}
+
+.right-content {
+	overflow: hidden;
+	position: absolute;
+	bottom: 75px;
+	top: 0px;
+	width: 100%;
+	background: url(/assets/bg-masqueideia.png) no-repeat #1b74dc bottom left;
+	border-bottom-left-radius: 25px;
+	-webkit-transition: bottom 0.5s ease;
+    -moz-transition: bottom 0.5s ease;
+    -ms-transition: bottom 0.5s ease;
+}
+
+.hide-right-content {
+	bottom: 100%!important;
+	-webkit-transition: bottom 0.5s ease;
+    -moz-transition: bottom 0.5s ease;
+    -ms-transition: bottom 0.5s ease;
+}
+
+.footer {
+	position: absolute;
+	width: 100%;
+	background-color: #366ea9;
+	bottom: 0px;
+	height: 70px;
+	border-top-left-radius: 25px;
+	vertical-align: middle;
+}
+
+.footer-content {
+	width: 100%;
+	position: absolute;
+	text-align: right;
+	right: 50px;
+}
+.footer-content small {
+	margin-bottom: 10px;	
+}
+
+.left-container {
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	width: 50%;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.left-content {
+    padding: 30px;
+}
+
+.grid25 {
+	float: left;
+	overflow: inherit;
+	display: inline-block;
+	width: 170px;
+	height: 170px;
+	padding: 15px;
+}
+.ideiabox {
+	overflow: hidden;
+    z-index: 0;
+    text-align: center;
+	position: absolute;
+    height: 170px;
+    width: 170px;
+	border: 1px solid lightgray;
+	border-radius: 15px;
+	background-color: white;
+	-webkit-transition:  background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+    -moz-transition:  background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+    -ms-transition:  background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+}
+
+.ideiabox:hover {
+    z-index: 0;
+	box-shadow: 0px 0px 15px #1b74dc;
+	background-color: #1b74dc;
+    border: 1px solid #1b74dc;
+	color: white;
+	color: transparent;
+   	text-shadow: 0 0 3px rgba(0,0,0,0.5);
+    -webkit-transition:  background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+    -moz-transition:  background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+    -ms-transition:  background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+}
+
+.ideiabox:hover .symbol {
+    z-index: 10;
+    position: absolute;
+	background-color: white;
+	color: #1b74dc;	
+    padding-left: 40px;
+    border: 1px solid #1b74dc;
+	-webkit-transition: background-color 0.5s ease, color 0.5s ease,  height 0.5s ease, padding-left 0.5s ease, border -.5s ease;
+    -moz-transition: background-color 0.5s ease, color 0.5s ease,  height 0.5s ease, padding-left 0.5s ease, border -.5s ease;
+    -ms-transition: background-color 0.5s ease, color 0.5s ease,  height 0.5s ease, padding-left 0.5s ease, border -.5s ease;
+}
+
+.ideiabox .symbol {
+    z-index: 10;
+	position: absolute;
+	bottom: -1px;
+	left: -1px;
+	height: 50px;
+	width: 50px;
+	font-size: 40px;
+	background-color: lightgray;
+	color: white;
+	border-bottom-left-radius: 12px;
+	border-top-right-radius: 12px;
+	vertical-align: middle;
+	border: 1px solid lightgray;
+    -webkit-transition: background-color 0.5s ease, color 0.5s ease,  height 0.5s ease, padding-left 0.5s ease, border -.5s ease;
+    -moz-transition: background-color 0.5s ease, color 0.5s ease,  height 0.5s ease, padding-left 0.5s ease, border -.5s ease;
+    -ms-transition: background-color 0.5s ease, color 0.5s ease,  height 0.5s ease, padding-left 0.5s ease, border -.5s ease;
+}
+.ideiabox .symbol .text {
+    position: relative;
+    font-size: 80%;
+    top: 15%;
+    text-align: center;
+}
+
+.ideiabox .title {
+	z-index: 3;
+	width: 100%;
+	height: 40px;
+	color: black;
+	background-color: white;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	-webkit-transition: background-color 0.5s ease, color 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    -moz-transition: background-color 0.5s ease, color 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    -ms-transition: background-color 0.5s ease, color 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+}
+
+.ideiabox:hover .title {
+	background-color: rgba(27,116,220,0.3);
+	color: white;
+	height: 100%;
+	vertical-align: middle;
+	-webkit-transition: background-color 0.5s ease, color 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    -moz-transition: background-color 0.5s ease, color 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    -ms-transition: background-color 0.5s ease, color 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+}
+
+.ideiabox .titletext {
+	margin: 10px 0;
+  	font-family: inherit;
+  	font-weight: bold;
+  	line-height: 20px;
+  	color: inherit;
+  	white-space: nowrap;
+  	text-rendering: optimizelegibility;
+	font-size: 17.5px!important;
+	-webkit-transition: font-size 0.5s ease, padding-top 0.5s ease;
+    -moz-transition: font-size 0.5s ease, padding-top 0.5s ease;
+    -ms-transition: font-size 0.5s ease, padding-top 0.5s ease;
+}
+
+.ideiabox:hover .titletext {
+	padding-top: 120px;
+	text-align: left;
+	font-size: 300px!important;
+	white-space: nowrap;
+	-webkit-transition: font-size 0.5s ease, padding-top 0.5s ease;
+    -moz-transition: font-size 0.5s ease, padding-top 0.5s ease;
+    -ms-transition: font-size 0.5s ease, padding-top 0.5s ease;
+}
+
+.ideiabox img {
+	z-index: 0;
+	text-align: center;
+	opacity: 1!important;
+	position: relative;
+}
+
+.ideiabox .whitefilm {
+	z-index: 2;
+	background-color: rgba(255, 255, 255, 0);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	-webkit-transition: background-color 0.s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+}
+
+.ideiabox:hover .whitefilm {
+	background-color: rgba(255, 255, 255, .5);
+	-webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+}
+
+.logo {
+	display: block;
+	position: relative;
+	left: 50px;
+	top: 50px;
+}
+.logo .sublogo {
+	position: relative;
+	top: 5px;
+}
+
+.button {
+	border-radius: 5px;
+	height: 30px;
+
+	border: none;
+	text-align: center;
+	padding: 10px;
+	margin-top: 5px;
+	margin-left: 5px;
+	background: white;
+	color: lightgray;
+	border: 1px solid lightgray;
+}
+.button-menu {
+    z-index: 100000;
+	background-color: #1b74dc;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	width: 100%;
+	display: inline-block;
+	padding: 5px;	
+	position: absolute;
+	border: 1px;
+
+}
+
+.button-menu .button {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.right-content .button {
+	position: absolute;	
+	top: 0px;
+
+}
+
+.button .negative {
+	outline: 1px solid lightgray;
+	vertical-align: middle;
+}
+
+.button:hover {
+	color: #1b74dc;	
+	text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.button:active {
+	background: blue;
+	color: white;
+	text-shadow: 0 0 3px rgba(0,0,0,-0.5);
+}
+
+.about {
+	position: absolute;
+	color: black;
+	border-top: 1px;
+	border-left: 1px;
+	border-bottom: 1px;
+	border-right: 0px;
+	border-style: solid;
+	border-color:  #1b74dc;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	padding: 25px;
+	bottom: 75px;
+	top: 45px;
+	right: 0px;
+}
+
+.about h2 {
+	color: #1b74dc;
+}
+
+
+
+
+

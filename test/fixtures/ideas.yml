@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  owner: 1
+  title: MyString
+  image: MyString
+  text: MyText
+  category: MyString
+  tags: MyString
+
+two:
+  owner: 1
+  title: MyString
+  image: MyString
+  text: MyText
+  category: MyString
+  tags: MyString

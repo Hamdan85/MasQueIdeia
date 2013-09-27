@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="right-container">
+    <div class="button-menu">
+      <button class="button negative" id="botaoSobre"><div>Sobre</div></button>
+      <%= link_to new_idea_path do %>
+        <button class="button negative" id=""><div>Nova Idéia</div></button>
+      <% end %>
+    </div>
+    <div class="about">
+      <h2>IDEIAS. Simples assim.</h2>
+
+      <p>E se um dia parássemos de "jogar fora" todas as ideias que não colocamos em prática e colocássemos à disposição de quem as possa achar útil? Foi com esta ideia que começamos a publicar o #masqueideia, um refúgio para todas as trilhões de ideias que sofrem aborto criativo todos os dias!</p>
+
+      <p>O Mas Que Ideia! é um projeto de brainstorming massivo, um espaço aberto para colaboração e publicação de ideias. Ideias que funcionam, ideias criativas, ideias insanas, ideias que mudariam o mundo ou que simplesmente não funcionam.</p>
+    </div>
+    <div class="right-content" id="right-content-id">
+      <div class="logo">
+        <img src="assets/masqueideia-logo.png">
+        <div class="sublogo">
+          <small>Idéias Simples</small>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+        <h5>Mas Que Idéia!® - Todos os direitos reservados.</h5>
+        by Gabriel Hamdan (2013)
+      </div>
+    </div>
+  </div>
+
+  <div class="left-container">
+    <div class="left-content">
+      <h1>Nossas Idéias</h1>
+      <% @ideas.each do |idea| %>
+        <%= link_to idea do %>
+          <div class="grid25">
+            <div class="ideiabox">
+              <div class="title">
+                <div class="titletext"><%= idea.title %></div>
+              </div>
+              <div class="whitefilm"></div>
+              <img src="<%= idea.image %>">
+              <div class="symbol">
+                <div class="text"><span class="icon-picture"></span></div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
