@@ -1,3 +1,7 @@
 class Idea < ActiveRecord::Base
-  attr_accessible :category, :image, :owner, :tags, :text, :title
+  attr_accessible :category, :image, :tags, :text, :title
+
+  validates :user_id, :presence => true
+
+  belongs_to :user
 end

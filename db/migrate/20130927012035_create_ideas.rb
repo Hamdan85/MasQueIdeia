@@ -1,7 +1,7 @@
 class CreateIdeas < ActiveRecord::Migration
   def change
     create_table :ideas do |t|
-      t.integer :owner
+      t.integer :user_id
       t.string :title
       t.string :image
       t.text :text
@@ -10,5 +10,6 @@ class CreateIdeas < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :ideas, [:user_id, :created_at]
   end
 end

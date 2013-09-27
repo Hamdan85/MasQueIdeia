@@ -1,9 +1,26 @@
 <div class="container">
   <div class="right-container">
     <div class="button-menu">
+      <%= link_to root_path do %>
+        <button class="button negative" id="botaoSobre"><div>Início</div></button>
+      <% end %>
       <button class="button negative" id="botaoSobre"><div>Sobre</div></button>
-      <%= link_to new_idea_path do %>
-        <button class="button negative" id=""><div>Nova Idéia</div></button>
+
+      <% if user_signed_in? %>
+          <%= link_to new_idea_path do %>
+              <button class="button negative" id=""><div>Nova Idéia</div></button>
+          <% end %>
+          <%= link_to edit_user_registration_path do %>
+            <button class="button negative" id=""><div><%= current_user.email %></div></button>
+          <% end %>
+          <%= link_to destroy_user_session_path, :method => :delete do %>
+            <button class="button negative" id=""><div>Sair</div></button>
+          <% end %>
+
+      <% else %>
+          <%= link_to  new_user_registration_path do %>
+            <button class="button negative" id=""><div>Registrar</div></button>
+          <% end %>
       <% end %>
     </div>
     <div class="about">

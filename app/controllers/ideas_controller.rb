@@ -1,6 +1,9 @@
 class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
+
+  before_filter :authenticate_user!, :except => [:index, :show]
+
   def index
     @ideas = Idea.all
 
@@ -24,6 +27,7 @@ class IdeasController < ApplicationController
   # GET /ideas/new
   # GET /ideas/new.json
   def new
+
     @idea = Idea.new
 
     respond_to do |format|
@@ -34,13 +38,13 @@ class IdeasController < ApplicationController
 
   # GET /ideas/1/edit
   def edit
-    @idea = Idea.find(params[:id])
+    @idea = current_user.ideas.find(params[:id])
   end
 
   # POST /ideas
   # POST /ideas.json
   def create
-    @idea = Idea.new(params[:idea])
+    @idea = current_user.ideas.new(params[:idea])
 
     respond_to do |format|
       if @idea.save
