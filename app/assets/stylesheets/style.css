@@ -399,6 +399,30 @@ h4 small {
 	color: #1b74dc;
 }
 
+.modal {
+    visibility: hidden;
+    left:33%;
+    top: 10%;
+    padding: 15px;
+    background-color: #ffffff;
+    position: fixed;
+    width: 33%;
+    border: 5px solid midnightblue;
+}
+
+.modal .close {
+    position: absolute;
+    border: 5px solid midnightblue;
+    color: red;
+    background-color: #ffffff;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    right: -15px;
+    top: -15px;
+}
+
 
 
 

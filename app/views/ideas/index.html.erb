@@ -18,12 +18,8 @@
           <% end %>
 
       <% else %>
-          <%= link_to  new_user_registration_path do %>
-            <button class="button negative" id=""><div>Registrar</div></button>
-          <% end %>
-          <%= link_to new_user_session_path do %>
-              <button class="button negative" id=""><div>Entrar</div></button>
-          <% end %>
+          <button class="button negative" id="registro"><div>Registrar</div></button>
+          <button class="button negative" id="login"><div>Entrar</div></button>
       <% end %>
     </div>
     <div class="about">
@@ -70,4 +66,13 @@
       <% end %>
     </div>
   </div>
+</div>
+
+<div class="modal" id="modalRegister">
+  <%= render :file => '/devise/registrations/new' %>
+  <div class="close">X</div>
+</div>
+<div class="modal" id="modalLogin">
+  <%= render :file => '/devise/sessions/new' %>
+  <div class="close">X</div>
 </div>
